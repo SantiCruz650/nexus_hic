@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "nexus_hic"
+version = "0.1.0"
+description = "Enterprise-grade C++/Python/Triton hybrid engine for high-performance GEMM on GPU"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Nexus HIC Contributors" }]
+dependencies = [
+    "torch>=2.0",
+    "triton>=3.0",
+    "numpy",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+include = ["core*", "kernels*", "data*", "tests*"]
