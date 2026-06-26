@@ -106,3 +106,4 @@ def triton_gemm(a, b):
         GROUP_SIZE_M=GROUP_SIZE_M
     )
     return c
+ 
